@@ -9,6 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ url_for('static' , filename='css/style.css') }}">
     {% block head %}{% endblock %}
+    <!-- NAVBAR START -->
+    <!-- LOGO AND TOGGLE -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <img src="{{ url_for('static', filename='images/banner_new.jpg') }}" class="banner">
+        <button class="navbar-toggler me-auto mb-2 mb-lg-0 m-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- LINKS -->
+        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+                <li>Right</li>
+            </ul>
+        </div> -->
+    {% block nav %}{% endblock %}
 </head>
 
 <body>

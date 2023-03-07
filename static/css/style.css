@@ -2,3 +2,12 @@ body{
     margin:0;
     font-family: sans-serif;
 }
+
+.banner{
+    display:block;
+    padding: 0 27%;
+}
+
+.navbar{
+    background-color: #5379e4;
+}
