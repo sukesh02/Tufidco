@@ -3,11 +3,19 @@ body{
     font-family: sans-serif;
 }
 
-.banner{
-    display:block;
-    padding: 0 27%;
+.navbar{
+    background-color:#002746;
 }
 
-.navbar{
-    background-color: #5379e4;
+#logo{
+    height: 5%;
+    width: 5%;
+}
+
+.navbar-brand{
+    font-size: 60px;
+}
+
+.nav-link{
+    color: white;
 }
