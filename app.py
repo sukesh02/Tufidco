@@ -6,6 +6,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sukesh:sukesh@2002@localho
 
 
 @app.route("/<name>")
+def fund(name):
+     return render_template("fund.html", name=name)
+@app.route("/<name>")
 def welcome(name):
 	return render_template("about.html", name=name)
 
