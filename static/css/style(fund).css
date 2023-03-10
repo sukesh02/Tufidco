@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+body{
+    margin: 0;
+}
+
+.intro{
+    height: 57vh;
+    background-color: #002746;
+    color: ghostwhite;
+    text-align: left;
+    font-size: 70px;
+    font-family: 'SF-Mono',sans-serif;
+}
+
+.fullform{
+    margin-left: 20px ;
+    padding-top: 30px;
+}
+
+.content{
+    text-align: center;
+    font-size: 22px;
+    color: #121212;
+    font-family: 'SF-Mono',sans-serif;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+
+.heading{
+    padding: 20px 0;
+    /* border-bottom: 1px solid #000; */
+    margin-bottom: 20px;
+}
+
+hr{
+    /* border-bottom: 10px; */
+    opacity: 1;
+    margin: 0rem 10rem 0rem 10rem;
+}
+
+.abcd{
+    color: #002746;
+    margin-left: 10px ;
+    margin-right: 10px;
+    text-align: center!important;
+    font-size: 18px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.accordion{
+    padding-top: 20px;
+    padding-left: 160px;
+    padding-right: 160px;
+    /* background-color: #86b7fe; */
+    /* border-color: #121212; */
+    margin-bottom: 30px;
+}
+/* 
+.accordion-button{
+    background-color:#cfe2ff;
+} */
+
+.list-group-item{
+    font-size: 22px;
+    font-family: 'Montserrat',sans-serif ;
+}

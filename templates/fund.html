@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/style(fund).css') }}">
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %} 
+<section class="intro">
+   <p class="fullform">TAMIL NADU URBAN <br> INFRASTRUCTURE DEVELOPMENT AND RENEWAL FUND(TNUIDRF)</p> 
+</section>
+<br>
+<div id="content">
+    <p class="heading"> <b>TAMIL NADU URBAN INFRASTRUCTURE DEVELOPMENT AND RENEWAL FUND(TNUIDRF)</b> </p>
+    <hr>
+    <p class="abcd">
+        <br>
+        The Government of Tamil Nadu vide G.O.Ms.No.49, Municipal Administration and Water Supply department, dated 30.03.2007 have ordered for the creation of Tamil Nadu Urban Infrastructure Development and Renewal Fund w.e.f.1.4.2006. The Fund will be operated by the Chairman and Managing Director, TUFIDCO who is the Officer on Special Duty, MA&WS dept., for the purpose of operating this fund.
+    </p>
+    
+</div>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            The Fund consists of the following Centrally sponsored scheme:
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Jawaharlal Nehru National Urban Renewal Mission</li>
+                <li class="list-group-item">Urban Infrastructure Development Scheme for Small and Medium Towns</li>
+                <li class="list-group-item">Metropolitan Infrastructure Development Scheme</li>
+                <li class="list-group-item">Mega City Programme</li>
+                <li class="list-group-item">Integrated Development scheme for Small and Medium Towns</li>
+                <li class="list-group-item">Infrastructure Gap Filling fund</li>
+                <li class="list-group-item">Operation and Maintenance Gap filling fund</li>
+                <li class="list-group-item">Scholarship fund</li>
+                <li class="list-group-item">Entertainment tax subsidy fund</li>
+                <li class="list-group-item">Incentive Fund</li>
+            </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
