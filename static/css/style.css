@@ -7,11 +7,11 @@ body{
     background-color:#002746;
 }
 
-#logo{
-    height: 5%;
-    width: 5%;
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
-
 .navbar-brand{
     font-size: 60px;
 }
@@ -31,8 +31,18 @@ body{
     margin-top: 0;
 }
 
-
 .text{
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.navbar-nav li {
+    background-color: #ffffff;
+    border: 2px solid #662D91;
+}
+
+ul.nav a:hover,.navbar-nav li.active > a{
+    color: #fff;
+    background-color: #662D91;
+    border: 2px solid #fff;
 }
