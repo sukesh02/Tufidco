@@ -11,14 +11,12 @@
     {% block head %}{% endblock %}
     <!-- NAVBAR START -->
     <!-- LOGO AND TOGGLE -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <img src="{{ url_for('static', filename='images/resized_logo.png') }}" class="logo">
-        &nbsp;&nbsp;
-        <div class="navbar-brand">TUFIDCO
-          <br>
-          <h6 class="sub">TAMILNADU URBAN FINANCE AND INFRASTRUCTURE DEVELOPMENT CORPORATION LTD</h6>
-        </div>  
-        
+        <div class="main-heading">
+          <img src="{{ url_for('static', filename='images/resized_logo.png') }}" class="logo" style="float: left">
+          TUFIDCO
+        </div>
+        <h6 class="sub m-auto">TAMILNADU URBAN FINANCE AND INFRASTRUCTURE DEVELOPMENT CORPORATION LTD</h6>
+        <nav class="navbar navbar-expand-lg navbar-dark">
         <!-- LINKS -->
         <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto"> -->
@@ -26,34 +24,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav ms-auto">
+          <ul class="nav m-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/about">ABOUT US</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">BOARD OF DIRECTORS</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">ORGANISATION CHART</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">SCHEMES</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">FUND</a>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">FUNDS</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">LINK</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">TENDER DETAILS</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item px-3">
               <a class="nav-link" href="#">CONTACT US</a>
             </li>
           </ul>
         </nav>
-    </nav>
     {% block nav %}{% endblock %}
 </head>
 
@@ -61,91 +58,52 @@
     <div class="content">
         {% block content %}{% endblock %} 
     </div>
-    <footer class="text-center text-white" id="footer" style="background-color: #3f51b5">
-        <section class="mt-5">
-          <div class="row text-center d-flex justify-content-center pt-5">
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="/about" class="text-white">ABOUT</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white text-nowrap">BOARD OF DIRECTORS</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white">SCHEMES</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white">FUND</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white">LINK</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white">CONTACT</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white text-nowrap">ORGANISATION CHART</a>
-              </h6>
-            </div>
-            <div class="col-sm-2">
-              <h6 class="text-uppercase font-weight-bold text">
-                <a href="#!" class="text-white text-nowrap">TENDER DETAILS</a>
-              </h6>
-            </div>
-          </div>
-        </section>
-        <hr class="my-5"/>
-        <section class="mb-5">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                distinctio earum repellat quaerat voluptatibus placeat nam,
-                commodi optio pariatur est quia magnam eum harum corrupti
-                dicta, aliquam sequi voluptate quas.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section class="text-center mb-5">
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </section>
-      </div>
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2023 Copyright:
-        <a class="text-white" href="#">TUFIDCO.in</a>
-      </div>
-    </footer>
+    <!-- footer -->
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+<!--footer-->
+<footer class="padding_4x">
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>
+          <a class="list-item px-5" href="#">BOARD OF DIRECTORS</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">ORGANISATION CHART</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">SCHEMES</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">FUNDS</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">LINKS</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">TENDER DETAILS</a>
+        </li>
+        <li>
+          <a class="list-item px-5" href="#">CONTACT US</a>
+        </li>
+      </ul>
+      </section>
+    </div>
   </div>
+  <div class="flex">
+    <section class="flex-content padding_1x">
+      <p class="copyright">Copyright ©2023 All rights reserved || TUFIDCO</p>
+    </section>
+  </div>
+</footer>
   {% block footer %}{% endblock %}
 </body>
 </html>
