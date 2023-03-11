@@ -12,7 +12,7 @@ def fund(name):
 def welcome(name):
 	return render_template("about.html", name=name)
 
-@app.route('/<name>')
+@app.route("/<name>")
 def schemes(name):
     return render_template("schemes.html", name=name)
 
