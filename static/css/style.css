@@ -1,22 +1,56 @@
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
 body {
   min-height: 100vh;
   font-family: sans-serif;
 }
 
 .navbar {
-  background-color: #6088fe;
+  background-color: #1668a0;
 }
 
 .logo img {
   width: 100%;
   height: auto;
   display: block;
-  text-align: center;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.introduction{
+  height: 45vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.intro-text{
+  font-size: 30px;
+}
+
+.intro-heading{
+  text-decoration: underline;
+  color: navy;
+}
+
+.incorporation{
+  height: 45vh;
+  background-color: #E8E2E2;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
 }
 
 .main-heading {
   text-align: center;
-  font-size: 60px;
+  font-size: 65px;
 }
 
 .sub {
@@ -30,12 +64,6 @@ body {
 
 .nav-link:hover{
   color: #000;
-}
-
-.introduction {
-  text-align: center;
-  height: 50vh;
-  background-color: #eee;
 }
 
 .text {
@@ -144,29 +172,6 @@ fieldset {
   text-transform: uppercase;
 }
 
-.btn_1 {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
-.btn_1:hover {
-  background-color: transparent;
-  color: var(--primary);
-}
-
-.btn_2 {
-  border: 1px solid var(--secondary);
-  background-color: var(--secondary);
-  color: var(--primary);
-}
-
-.btn_2:hover {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
 @media (max-width: 920px) {
   .flex {
     flex-wrap: wrap;
@@ -193,17 +198,17 @@ fieldset {
               FOOTER
   ****************************/
 footer {
-  background-color: var(--dark);
-  color: var(--lite);
+  background-color: #9ED2C6;
+  color: var(--gray);
 }
 
 footer h3 {
-  color: var(--white);
+  color: var(--dark);
   margin-bottom: 1.5rem;
 }
 
 footer .list-item {
-  color: var(--lite);
+  color: var(--dark);
   display: block;
   margin: 15px 0;
 }
