@@ -1,13 +1,293 @@
-body{
-    margin:0;
-    font-family: sans-serif;
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
 }
 
-.banner{
-    display:block;
-    padding: 0 27%;
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
 }
 
-.navbar{
-    background-color: #5379e4;
+.navbar {
+  background-color: #1668a0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.introduction{
+  height: 45vh;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.intro-text{
+  font-size: 30px;
+}
+
+.intro-heading{
+  text-decoration: underline;
+  color: navy;
+}
+
+.incorporation{
+  height: 45vh;
+  background-color: #E8E2E2;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 65px;
+}
+
+.sub {
+  font-size: 25px;
+  text-align: center;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover{
+  color: #000;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --dark: #1e1e1e;
+  --gray: rgba(1, 1, 1, 0.6);
+  --lite: rgba(255, 255, 255, 0.6);
+  --primary: #002347;
+  --secondary: #fdc632;
+}
+
+/***************************
+            DEFAULT
+  ****************************/
+body {
+  margin: 0;
+  overflow-x: hidden !important;
+  font-family: "Poppins", sans-serif;
+}
+
+.list-item {
+  text-decoration: none !important;
+  min-width: fit-content;
+  width: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+}
+
+li{
+  display: inline-block;
+}
+
+.list-item,
+button {
+  transition: 0.5s;
+}
+
+.list-item,
+p {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  font-weight: 400;
+}
+
+.list-item,
+button,
+input,
+textarea,
+select {
+  outline: none !important;
+}
+
+fieldset {
+  border: 0;
+}
+
+.title {
+  color: var(--primary);
+}
+
+.flex,
+.fixed_flex {
+  display: flex;
+}
+
+.flex-content {
+  width: 100%;
+  position: relative;
+}
+
+.padding_1x {
+  padding: 1rem;
+}
+
+.padding_2x {
+  padding: 2rem;
+}
+
+.padding_3x {
+  padding: 3rem;
+}
+
+.padding_4x {
+  padding: 4rem;
+}
+
+.btn1 {
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (max-width: 920px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  .padding_1x,
+  .padding_2x,
+  .padding_3x,
+  .padding_4x {
+    padding: 1rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+
+  .list-item,
+  p {
+    font-size: 12px;
+  }
+}
+
+/***************************
+              FOOTER
+  ****************************/
+footer {
+  background-color: #9ED2C6;
+  color: var(--gray);
+}
+
+footer h3 {
+  color: var(--dark);
+  margin-bottom: 1.5rem;
+}
+
+footer .list-item {
+  color: var(--dark);
+  display: block;
+  margin: 15px 0;
+}
+
+footer .list-item:hover {
+  color: var(--white);
+}
+
+footer fieldset {
+  padding: 0;
+}
+
+footer fieldset input {
+  background-color: #334f6c;
+  border: 0;
+  color: var(--lite);
+  padding: 1rem;
+}
+
+footer fieldset .btn {
+  border-radius: 0;
+  border: 0;
+}
+
+footer fieldset .btn_2:hover {
+  background-color: var(--secondary);
+  border: 0;
+  color: var(--primary);
+}
+
+footer .flex:last-child {
+  align-items: center;
+}
+
+footer .flex:last-child .flex-content:last-child {
+  text-align: right;
+}
+
+footer .flex:last-child p {
+  color: var(--white);
+}
+
+footer .flex:last-child a {
+  width: 40px;
+  display: inline-block;
+  background-color: #334f6c;
+  color: var(--white);
+  padding: 0.5rem;
+  margin-right: 3px;
+  text-align: center;
+}
+
+footer .flex:last-child a:hover {
+  background-color: var(--secondary);
+  color: var(--gray);
+}
+
+.copyright{
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  footer .flex:first-child {
+    flex-wrap: wrap;
+  }
+
+  footer .flex:first-child .flex-content {
+    flex: 1 1 40%;
+  }
+}
+
+@media (max-width: 920px) {
+  footer .flex:last-child .flex-content:last-child {
+    text-align: left;
+  }
+}
+
+@media (max-width: 320px) {
+  footer .flex:first-child .flex-content {
+    flex: 1 1 100%;
+  }
 }
