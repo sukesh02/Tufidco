@@ -4,21 +4,22 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sukesh:sukesh@2002@localhost/mydatabase'
 
+
+@app.route("/<name>")
+def schemes(name):
+     return render_template("schemes.html", name=name)
+  
 @app.route('/<name>')
 def bod(name):
     return render_template('bod.html',name=name)
 
 @app.route('/<name>')
 def fund(name):
-    return render_template("fund.html", name=name)
+     return render_template("fund.html", name=name)
 
 @app.route('/<name>')
 def about(name):
     return render_template('about.html', name=name)
-
-@app.route('/<name>')
-def schemes(name):
-    return render_template('schemes.html', name=name)
 
 @app.route('/')
 def index():
