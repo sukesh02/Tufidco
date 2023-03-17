@@ -6,17 +6,17 @@ body{
 }
 
 .intro{
-    height: 57vh;
-    background-color: #F5F5F5;
+    height: 55vh;
+    background-color: #002746;
     color: ghostwhite;
     text-align: left;
-    font-size: 70px;
+    font-size: 50px;
     font-family: 'SF-Mono',sans-serif;
 }
 
 .fullform{
-    margin-left: 20px ;
-    padding-top: 30px;
+    text-align: justify;
+    font-size: 4.3vw;
 }
 
 .content{
@@ -56,6 +56,7 @@ hr{
     /* background-color: #86b7fe; */
     /* border-color: #121212; */
     margin-bottom: 30px;
+    width: auto;
 }
 /* 
 .accordion-button{
@@ -65,4 +66,17 @@ hr{
 .list-group-item{
     font-size: 22px;
     font-family: 'Montserrat',sans-serif ;
+}
+
+/* @media (max-width: 979px){
+    .accordion{
+        max-width: 100%;
+    }
+} */
+
+@media (min-width:320px) {
+    .fullform{
+        text-align: justify;
+        font-size: 4.3vw;
+    }
 }
