@@ -20,9 +20,13 @@ def bod():
 def fund():
     return render_template("fund.html")
 
-@app.route('/about')
-def about():
-    return render_template('about.html')
+@app.route("/sch")
+def sch():
+     return render_template("sch.html")
+
+@app.route("/about")
+def welcome():
+	return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

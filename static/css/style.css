@@ -117,7 +117,8 @@ button {
   transition: 0.5s;
 }
 
-.list-item {
+.list-item
+ {
   font-size: 14px;
 }
 
@@ -197,7 +198,8 @@ fieldset {
     padding: 0.5rem 1rem;
   }
 
-  .list-item {
+  .list-item
+   {
     font-size: 12px;
   }
 }
@@ -561,3 +563,4 @@ footer .flex:last-child a:hover {
   padding-right: 18px;
   font-size: 120%;
 }
+
