@@ -12,9 +12,9 @@ def index():
 def schemes():
     return render_template("schemes.html")
 
-@app.route('/bod')
+@app.route('/boardofdirectors')
 def bod():
-    return render_template('bod.html')
+    return render_template('boardofdirectors.html')
 
 @app.route('/fund')
 def fund():
