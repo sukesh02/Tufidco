@@ -1,8 +1,17 @@
 from flask import Flask,render_template,url_for,request
-import psycopg2
+from flask_mysqldb import MySQL
+import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+
+# app.config['MYSQL_HOST'] = 'localhost'
+# #MySQL username
+# app.config['MYSQL_USER'] = 'root'
+# #MySQL password here in my case password is null so i left empty
+# app.config['MYSQL_PASSWORD'] = 'Sukesh@2002'
+# #Database name In my case database name is projectreporting
+# app.config['MYSQL_DB'] = 'schemes'
 
 @app.route('/')
 def index():
@@ -10,7 +19,21 @@ def index():
 
 @app.route("/schemes")
 def schemes():
-    return render_template("schemes.html")
+    global data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="schemes",
+    user="root",
+    password="Sukesh@2002" )
+
+    cursor = conn.cursor()
+    query="SELECT * FROM schemes_data"
+    cursor.execute(query)
+
+    data=cursor.fetchall()
+    conn.close()
+    
+    return render_template("schemes.html", data=data)
 
 @app.route('/boardofdirectors')
 def bod():
@@ -30,19 +53,3 @@ def welcome():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-conn = psycopg2.connect(database="schemes", 
-                        user="sukku",
-                        password="schemes", 
-                        host="localhost", port="5432")
-
-cur = conn.cursor()
-
-cur.execute('''SELECT * FROM schemes_data''')
-
-data = cur.fetchall()
-
-conn.commit()
-
-cur.close()
-conn.close()

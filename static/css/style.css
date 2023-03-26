@@ -29,7 +29,7 @@ body {
 }
 
 .introduction{
-  height: 45vh;
+  height: 30vh;
   background-color: #F5F5F5;
   display: flex;
   padding-left: 20px;
@@ -47,7 +47,7 @@ body {
 }
 
 .incorporation{
-  height: 45vh;
+  height: 30vh;
   background-color: #E8E2E2;
   display: flex;
   padding-left: 20px;
@@ -58,6 +58,7 @@ body {
 .rolling{
   text-align: center;
 }
+
 .main-heading {
   text-align: center;
   font-size: 65px;
@@ -79,6 +80,29 @@ body {
 .text {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.embla{  
+  overflow: hidden;
+}
+
+.embla__container{  
+  display: flex;
+  text-align: center;
+}
+
+.wrap{
+  display: flex;
+  padding-left: 15%;
+}
+
+.button-img{
+  height: 20px;
+  width: 20px;
+}
+
+.embla__slide{  
+  flex: 0 0 100%;  
 }
 
 :root {
