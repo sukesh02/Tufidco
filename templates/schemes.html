@@ -101,33 +101,14 @@ Under this Scheme from 1998-1999 to 2010-11 a sum of   Rs 2092.96 crore have bee
         </tr>
         </thead>
         <tbody>
+        {% for item in data %}
         <tr>
-            <td>2008-09</td>
-            <td>12</td>
-            <td>8441.10</td>
-            <td>747.86</td>
+            <td>{{item[0]}}</td>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
         </tr>
-        <tr>
-            <td>2009-10</td>
-            <td>22</td>
-            <td>28686.27</td>
-            <td>26339.86</td>
-            
-        </tr>
-        <tr>
-            <td>2010-11</td>
-            <td>30</td>
-            <td>47484.60</td>
-            <td>10284.10</td>
-            
-        </tr>
-        <tr>
-            <td>2011-12</td>
-            <td>09</td>
-            <td>86491.97</td>
-            <td>6810.00</td>
-            
-        </tr>
+        {% endfor %}
         <tbody>
     </table>
 </div>
