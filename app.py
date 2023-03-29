@@ -19,7 +19,7 @@ def index():
 
 @app.route("/schemes")
 def schemes():
-    global data
+    global schemes_data
     conn = mysql.connector.connect(
     host="localhost",
     database="schemes",
@@ -30,18 +30,31 @@ def schemes():
     query="SELECT * FROM schemes_data"
     cursor.execute(query)
 
-    data=cursor.fetchall()
+    schemes_data=cursor.fetchall()
     conn.close()
     
-    return render_template("schemes.html", data=data)
+    return render_template("schemes.html", data=schemes_data)
 
 @app.route('/boardofdirectors')
 def bod():
-    return render_template('boardofdirectors.html')
+    global bod_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="boardofdirectors",
+    user="root",
+    password="Sukesh@2002" )
 
-@app.route('/fund')
+    cursor = conn.cursor()
+    query="SELECT * FROM bod_data"
+    cursor.execute(query)
+
+    bod_data=cursor.fetchall()
+    conn.close()
+    return render_template('boardofdirectors.html', data=bod_data)
+
+@app.route('/funds')
 def fund():
-    return render_template("fund.html")
+    return render_template("funds.html")
 
 @app.route("/sch")
 def sch():

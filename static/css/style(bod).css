@@ -118,6 +118,10 @@ h1 {
   font-weight: bold;
 }
 
+.bod_details{
+  word-break: keep-all;
+}
+
 .sub_heading{
   font-style: oblique;
   font-weight: bold;
@@ -126,6 +130,10 @@ h1 {
   text-decoration: underline dashed;
   text-underline-position: below ;
 }
+
+  span:empty{
+    display:none;
+  }
 
 /* -------media query for mobile------- */
 
