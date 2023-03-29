@@ -2,12 +2,13 @@ import mysql.connector
 
 conn = mysql.connector.connect(
     host="localhost",
-    database="schemes",
+    database="boardofdirectors",
     user="root",
     password="Sukesh@2002" )
 
 cursor = conn.cursor()
-query="SELECT * FROM schemes_data"
+query="SELECT * FROM bod_data"
+# query="SELECT COALESCE(), '')"
 cursor.execute(query)
 
 data=cursor.fetchall()
