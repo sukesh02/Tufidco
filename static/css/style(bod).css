@@ -23,8 +23,12 @@ h1 {
   /* Style 9
      ----------------------------- */
   .nine h1 {
-    text-align:center; font-size:50px; text-transform:uppercase; color:#222; letter-spacing:1px;
-    font-family:"Playfair Display", serif; font-weight:400;
+    text-align:center; font-size:50px; 
+    text-transform:uppercase; 
+    color:#222; 
+    letter-spacing:1px;
+    font-family:"Playfair Display", serif; 
+    font-weight:400;
   }
   .nine h1 span {
     margin-top: 5px;
@@ -78,21 +82,33 @@ h1 {
 .bodrep{
   background-color: #f7f7f8;
   min-height: 55vh;
-  max-height: 200vh;
+  /* max-height: 250vh;
+  min-width: 100vh; */
+  max-width: 150vh;
   margin: 0 3%;
   border: 2px solid #f7f7f8;
-  border-radius: 50px;
+  border-radius: 0 50px 50px 0;
   padding: 20px;
-  color: black;  
+  color: black;
+  box-shadow:
+  3.3px 3.6px 8.1px -14px rgba(0, 0, 0, 0.09),
+  7.8px 8.6px 19.5px -14px rgba(0, 0, 0, 0.086),
+  14.8px 16.2px 36.7px -14px rgba(0, 0, 0, 0.081),
+  26.4px 28.8px 65.4px -14px rgba(0, 0, 0, 0.075),
+  49.3px 53.9px 122.4px -14px rgba(0, 0, 0, 0.066),
+  118px 129px 293px -14px rgba(0, 0, 0, 0.052) ;
+  flex: 0 0 45%;
 }
 
-.sidebox{
-  padding: 10px;
-  margin: 10px;
-  background-color: #A4907C;
-  min-height: 70px;
-  max-height: 300px;
-  width: 15%;
+.d-flex{
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.sidebox {
+  background-color: #403a3a;
+  color: white;
+  padding: 0%;
 }
 .bod_names{
   font-size:large;
@@ -100,4 +116,29 @@ h1 {
   text-underline-position: below;
   font-style: oblique;
   font-weight: bold;
+}
+
+.bod_details{
+  word-break: keep-all;
+}
+
+.sub_heading{
+  font-style: oblique;
+  font-weight: bold;
+  font-style:sans-serif;
+  font-size: larger;
+  text-decoration: underline dashed;
+  text-underline-position: below ;
+}
+
+  span:empty{
+    display:none;
+  }
+
+/* -------media query for mobile------- */
+
+@media only screen and (max-width: 768px) {
+  [class*="bod_details"] {
+    width: 100%;
+  }
 }

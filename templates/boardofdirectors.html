@@ -1,0 +1,40 @@
+{%extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/style(bod).css">
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/style(bod).css') }}">
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+{% block content %}
+    
+      <div class="nine">
+        <h1>Board of directors<span>Committee Members</span></h1>
+      </div>
+<div class="d-flex">
+  <section class="sidebox" >
+    <p>kjbfiuGOIaugG</p>
+    
+    
+  
+  </section>
+    <section class="bodrep" style="
+    margin-left: 0px;">
+      
+        <!-- <Header>My first attemptsdheieckenefkdncdlfesdklcnefnwensdklncelkfeiohhdfjefjeojsdofjeofjoejdlceofjoejf</Header> -->
+      <div>
+        {% for item in data %}
+        <p class="bod_names">{{item[0]}}</p>
+        <p class="bod_details">{{item[1]}}</p>
+        <span class="bod_details">{{item[2]}}</span>
+        <hr>
+        {% endfor %}
+      </div>
+    </section>
+</div> 
+<br>
+<br>
+<br>
+{% endblock %}

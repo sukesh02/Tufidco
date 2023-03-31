@@ -1,3 +1,7 @@
+body{
+  overflow-x: scroll;
+}
+
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
@@ -5,6 +9,7 @@
 
 body {
   min-height: 100vh;
+  min-width: 100vw;
   font-family: sans-serif;
 }
 
@@ -24,9 +29,10 @@ body {
 }
 
 .introduction{
-  height: 45vh;
+  height: 30vh;
   background-color: #F5F5F5;
   display: flex;
+  padding-left: 20px;
   flex-direction: column;
   overflow-y: scroll;
 }
@@ -41,11 +47,16 @@ body {
 }
 
 .incorporation{
-  height: 45vh;
+  height: 30vh;
   background-color: #E8E2E2;
   display: flex;
+  padding-left: 20px;
   flex-direction: column;
   overflow-y: scroll;
+}
+
+.rolling{
+  text-align: center;
 }
 
 .main-heading {
@@ -69,6 +80,29 @@ body {
 .text {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.embla{  
+  overflow: hidden;
+}
+
+.embla__container{  
+  display: flex;
+  text-align: center;
+}
+
+.wrap{
+  display: flex;
+  padding-left: 15%;
+}
+
+.button-img{
+  height: 20px;
+  width: 20px;
+}
+
+.embla__slide{  
+  flex: 0 0 100%;  
 }
 
 :root {
@@ -98,7 +132,7 @@ body {
   width: -moz-fit-content;
 }
 
-.sidebyside{
+ul > li{
   display: inline-block;
  } 
 
