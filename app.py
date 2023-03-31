@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-@app.route("/schemesfunds")
+@app.route("/sch")
 def sch():
     global sch_data
     conn = mysql.connector.connect(
