@@ -1,18 +1,16 @@
 import mysql.connector
-
 conn = mysql.connector.connect(
     host="localhost",
-    database="boardofdirectors",
+    database="funds",
     user="root",
-    password="Sukesh@2002" )
+    password="tejaswini@3012" )
 
 cursor = conn.cursor()
-query="SELECT * FROM bod_data"
-# query="SELECT COALESCE(), '')"
+query="SELECT * FROM uids"
 cursor.execute(query)
 
-data=cursor.fetchall()
+sch_data=cursor.fetchall()
 conn.close()
 
-for row in data:
+for row in sch_data:
     print(row)
