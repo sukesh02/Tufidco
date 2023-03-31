@@ -1,13 +1,69 @@
 from flask import Flask,render_template,url_for
+import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sukesh:sukesh@2002@localhost/mydatabase'
 
 @app.route("/sch")
 def sch():
-     return render_template("sch.html")
+    global sch_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
 
+    cursor = conn.cursor()
+    query="SELECT * FROM fund_data"
+    cursor.execute(query)
+
+    sch_data=cursor.fetchall()
+    conn.close()
+
+    global swap_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
+    
+    cursor = conn.cursor()
+    query="SELECT * FROM swap"
+    cursor.execute(query)
+    
+    swap_data=cursor.fetchall()
+    conn.close()
+
+    global smart_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
+
+    cursor = conn.cursor()
+    query="SELECT * FROM smartcity"
+    
+    cursor.execute(query)
+
+    smart_data=cursor.fetchall()
+    conn.close()
+
+    global uids_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
+
+    cursor = conn.cursor()
+    query="SELECT * FROM uids"
+    cursor.execute(query)
+
+    uids_data=cursor.fetchall()
+    conn.close()
+    
+    return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
 @app.route("/fund")
 def fund():
      return render_template("fund.html")
@@ -16,9 +72,9 @@ def fund():
 def welcome():
 	return render_template("about.html")
 
-@app.route("/<name>")
-def schemes(name):
-    return render_template("schemes.html", name=name)
+@app.route("/schemes")
+def schemes():
+    return render_template("schemes.html")
 
 @app.route('/')
 def index():

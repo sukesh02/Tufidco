@@ -11,43 +11,731 @@
 
 {% block content %}
 <section id="smartcities">
-    <span class="heading1"><u>SMART CITIES MISSION</u></span>
-    <p class="sccontent">The Government of India launched Smart Cities Mission on 25.06.2015.  The objective of the Smart Cities Mission is to create world class cities as per the aspirations and needs of the citizens. TUFIDCO is the Mission Directorate for implementation of Smart Cities Mission in Tamil Nadu.<br></br>
-    The Government of India have selected 100 cities throughout India to develop as ‘Smart Cities” by upgrading infrastructure and smart applications.  It improves the quality of life, efficiency of urban operations and meets the present and future generations with respect to economic, social and environmental aspects. 11 cities have been selected in Tamil Nadu to be developed as ‘Smart Cities’. The selected Smart Cities are Chennai, Coimbatore, Madurai, Thanjavur, Salem, Vellore, Tiruppur, Thoothukudi, Tirunelveli, Tiruchirappalli and Erode.<br></br>
-    The implementation of Smart City project is being done by a Special Purpose Vehicle (SPV) formed at City-level.  Under this Mission, each city will get Rs 500 Cr as Central assistance and Rs. 500 Cr as State grant for implementing various smart cities projects.<br></br>
-    Out of 378 projects sanctioned at a cost of Rs.10379.14 Cr, 63 projects at a cost of Rs.248.09 Cr have been completed, 199 projects at a cost of Rs.5502.40 Cr. are under execution and the remaining projects are under various stages of implementation.
-</p>  
+    <span class="heading1"><b>SMART CITIES MISSION</b></span>
+    <hr>
+    <p class="sccontent">The Smart Cities Mission was launched by the Union Government in June 2015 with the aim of promoting sustainable and inclusive cities that provide core infrastructure, give decent living conditions to citizens, deliver on environmental sustainability and application of ‘Smart’ Solutions. In Tamil Nadu, 11 cities viz., Chennai, Coimbatore, Madurai, Thanjavur, Salem, Vellore, Tiruppur, Thoothukudi, Tirunelveli, Tiruchirappalli and Erode have been included in the Mission. </p>
+    <p class="sccontent">Various projects have been implemented in these 11 cities based on the Smart Cities Mission guidelines, with the Union Government funding of Rs.500 crore per city and the State Government funding of Rs.500 crore per city (total Rs.1,000 crore per city).</p>
+    <p class="sccontent">A total of 680 projects worth of Rs. 10,804.55 crore have been taken up in the Mission Cities. Out of 680 projects, 304 projects worth of Rs.2,697.00 crore are complete, and 376 projects worth of Rs.8,107.55 crore are under implementation. The details are abstracted in Table 9.6 below. 
+    </p>
+    
+    <span class="sccontent">
+       <b>NOTE:</b> The Union Government have informed that the Smart Cities Mission will be phased out on 30.06.2023.
+    </span>
+    <br></br>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>Sl No.</th>
+                <th>Name of the Smart city</th>
+                <th>No. of projects</th>
+                <th>Project Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+                {%for item in data2 %}
+                <tr>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                    <td>{{item[2]}}</td>
+                    <td>{{item[3]}}</td>
+                </tr>
+                {% endfor %}
+            <!-- <tr>
+                <td>1</td>
+                <td>Chennai</td>
+                <td>48</td>
+                <td>1,096.95</td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Coimbatore</td>
+                <td>56</td>
+                <td>979.34</td>
+                
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Madurai</td>
+                <td>16</td>
+                <td>979.16</td>
+                
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Thanjavur</td>
+                <td>103</td>
+                <td>974.58</td>
+                
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Salem</td>
+                <td>86</td>
+                <td>968.67</td>
+                
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Vellore</td>
+                <td>52</td>
+                <td>963.40</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Tiruppur</td>
+                <td>28</td>
+                <td>985.39</td>
+                
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Tirunelveli</td>
+                <td>84</td>
+                <td>965.00</td>
+                
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Thoothukudi</td>
+                <td>70</td>
+                <td>965.05</td>
+                
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Tiruchirapalli</td>
+                <td>83</td>
+                <td>962.17</td>
+                
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Erode</td>
+                <td>54</td>
+                <td>964.84</td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td><b>Total</b></td>
+                <td><b>680</b></td>
+                <td><b>10,804.55</b></td>
+                
+            </tr> -->
+            <tbody>
+        </table>
+    </div>
+    <!-- <p class="sccontent">
+        The Union Government have informed that the Smart Cities Mission will be phased out on 30.06.2023. 
+    </p> -->
 </section>
 
 
 <section id="iudm">
-    <span class="heading2"><u>INTEGRATED URBAN DEVELOPMENT MISSION (IUDM)</u></span>
-    <p class="iudmcontent">Integrated Urban Development Mission, a State flagship programme, was operational from 2011-12 to 2015-16 (5 years) aiming to improve basic infrastructure facilities like roads, drinking water supply, street lights, sewerage, storm water drains, sanitation, solid waste management, improvement of bus stands and parks in all Corporations (Except Chennai), Municipalities and Town Panchayats. Under this scheme, 13,257 projects were sanctioned at a cost of Rs 9594.83 Crore (fully funded/partly funded). Out of the sanctioned 13,257 projects, 13,214 projects have been completed and the remaining 43 projects are at various stages of implementation.
+    <span class="heading22"><b>INTEGRATED URBAN DEVELOPMENT MISSION (IUDM) Phase I (2011-16) </b></span>
+    <hr>
+    <p class="iudmcontent">Integrated Urban Development Mission was implemented from 2011-12 to 2016-17 384 (5 years). The scheme aims to provide basic infrastructure facilities such as roads, drinking water supply, street lighting, sewerage, storm water drains, sanitation, solid waste management, and improvement of bus stands and parks to all the municipal corporations (except Chennai), municipalities, and town panchayats. 
     <br></br>
-    The scheme was re-launched by Government of Tamil Nadu to be operational from the year 2018-19 onwards with the allocation of Rs 750 Cr per year.  549  projects were sanctioned at a cost of Rs. 1234 Cr during 2018-19 and 2019-20 (till 30th Sep 2019). Out of the total sanctioned projects, 166 no. of projects have been completed and the remaining projects are in various stages of implementation.
+        A total of 13,257 projects were sanctioned under IUDM-I at a cost of Rs 10,773.22 crore (fully funded / partly funded). 13,220 of these projects have been completed, and 37 projects are being implemented.
     </p>
+    <span class="heading2"><b>INTEGRATED URBAN DEVELOPMENT MISSION (IUDM) Phase II (FY 2018-19 - 2020-21) </b></span>
+    <hr>
+    <p class="iudmcontent">The IUDM II was launched during the year 2018-19, with a fund allocation of Rs.750 crore each year. The following urban infrastructure projects were taken up by Urban Local Bodies (except Chennai) based on the sanctions accorded during the years 2018-19, 2019-20, and 2020-21 under IUDM II, as abstracted in Table 9.10 below. 
+    </p>
+    <span class="sccontent">
+        <b>NOTE:</b> A total of 1,495 projects have been completed, 976 are being implemented. 
+    </span>
+    <br></br>
+    <div class="wrap">
+      <table class="iudmp2">
+        <thead>
+          <tr class="headingsuh">
+            <th rowspan="2">S. No</th>
+            <th rowspan="2">Sector</th>
+            <th rowspan="2">No. of works</th>
+            <th rowspan="2">Project cost</th>
+            <th colspan="4">IUDM Share</th>
+          </tr>
+          <tr colspan="4" class="subhead">
+            <th colspan="1">2018-19</th>
+            <th colspan="1">2019-20</th>
+            <th colspan="1">2020-21</th> 
+            <th colspan="1">2020-22</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Road</td>
+            <td>1500</td>
+            <td>1215.19</td>
+            <td>292.77</td>
+            <td>409.26</td>
+            <td>285.76</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Drainage</td>
+            <td>769</td>
+            <td>263.70</td>
+            <td>94.51</td>
+            <td>51.13</td>
+            <td>86.42</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Water Supply</td>
+            <td>89</td>
+            <td>2650.66</td>
+            <td>225.45</td>
+            <td>335.53</td>
+            <td>80.96</td>
+            <td>67.62</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>UGD</td>
+            <td>67</td>
+            <td>703.97</td>
+            <td>121.87</td>
+            <td>94.68</td>
+            <td>238.24</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Park</td>
+            <td>3</td>
+            <td>9.50</td>
+            <td>-</td>
+            <td>8.53</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Shandy</td>
+            <td>2</td>
+            <td>8.40</td>
+            <td>-</td>
+            <td>1.12</td>
+            <td>4.20</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Bridges</td>
+            <td>3</td>
+            <td>20.15</td>
+            <td>-</td>
+            <td>4.04</td>
+            <td>12.08</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Bus stand</td>
+            <td>4</td>
+            <td>12.84</td>
+            <td>-</td>
+            <td>-</td>
+            <td>10.27</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Street Lights</td>
+            <td>12</td>
+            <td>3.81</td>
+            <td>-</td>
+            <td>-</td>
+            <td>3.04</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Septage</td>
+            <td>11</td>
+            <td>31.17</td>
+            <td>11.00</td>
+            <td>20.17</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Solid Waste Management</td>
+            <td>1</td>
+            <td>8.57</td>
+            <td>-</td>
+            <td>7.71</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Others</td>
+            <td>10</td>
+            <td>9.80</td>
+            <td>4.40</td>
+            <td>5.12</td>
+            <td>-</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><b>Total</b></td>
+            <td><b>2471</b></td>
+            <td><b>4937.76</b></td>
+            <td><b>750.00</b></td>
+            <td><b>937.28</b></td>
+            <td><b>720.97</b></td>
+            <td><b>67.62</b></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>    
 </section>
 
-<section id="jnnurm">
-    <span class="heading3"><u>JNNURM – URBAN INFRASTRUCTURE AND GOVERNANCE (JNNURM – UIG)</u></span>
+<section id="amrut">
+    <span class="heading3"><b>ATAL MISSION FOR REJUVENATION AND URBAN TRANSFORMATION (AMRUT)</b></span>
+    <hr>
+    <p class="amrutcontent">Atal Mission for Rejuvenation and Urban Transformation (AMRUT) was launched by the Union Government during June 2015. The primary aim of the mission is to achieve (a) every household have access to a tap with assured supply of water and a sewerage connection, (b) increasing the amenity value of cities by developing greenery and well maintained open spaces, e.g. park; and (c) reducing pollution by switching to public transport or constructing facilities for nonmotorized transport, e.g. walking and cycling. The mission will be phased out by the end of March 2023.  
     <br></br>
-    <span class="heading4"><u>Jawaharlal Nehru National Urban Renewal Mission – Urban Infrastructure and Governance (JnNURM – UIG)</u></span>
-    <p class="jnnurmcontent">The Government of India have launched the Jawaharlal Nehru National Urban Renewal Mission (JNNURM) during December 2005. The Mission period of JNNURM is 7 years. It was extended for two more years i.e upto March 2014. The Government of India have sanctioned 48 projects at an estimated value of Rs.5250.16 crore (GOI Share: Rs. 2126.76 Cr; GoTN Share: 866.36 Cr; ULB/parastatal agencies share: Rs. 2257.03 Cr). Out of 48 sanctioned projects, 39 projects have been completed, 9 projects are in progress. </p>
-    <span class="heading5"><u>Transition Phase projects</u></span>
-    <p class="uigcontent">The Government of India sanctioned 17 projects for an amount of Rs.867.83 crore. The Government of India share is Rs.371.49 Crore.   Out of 17 projects, 3 projects have been completed, 12 projects are in progress and 2 projects have been dropped (Coimbatore 24 X 7 Water supply project and Poonamallee Water Supply).</p>
+    The Union Government has sanctioned implementation of AMRUT scheme in the following 28 urban local bodies in Tamil Nadu viz., 15 Municipal Corporations, 12 Municipalities and 1 Town Panchayat for. </p>
+    <div class="table-wrapper">
+      <table class="fl-table">
+        <tbody>
+        <tr>
+            <td>1.</td>
+            <td>Greater Chennai Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>Coimbatore Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>Madurai Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>Tiruchirappalli Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>5.</td>
+            <td>Salem Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>6.</td>
+            <td>Tirunelveli Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>7.</td>
+            <td>Tiruppur Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>8.</td>
+            <td>Thoothukudi Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>9.</td>
+            <td>Thanjavur Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>10.</td>
+            <td>Erode Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>11.</td>
+            <td>Vellore Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>12.</td>
+            <td>Dindigul Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>13.</td>
+            <td>Nagercoil Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>14.</td>
+            <td>Hosur Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>15.</td>
+            <td>Avadi Corporation </td>
+            
+        </tr>
+        <tr>
+            <td>16.</td>
+            <td>Pallavapuram Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>17.</td>
+            <td>Tambaram Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>18.</td>
+            <td>Cuddalore Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>19.</td>
+            <td>Kancheepuram Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>20.</td>
+            <td>Tiruvannamalai Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>21.</td>
+            <td>Kumbakonam Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>22.</td>
+            <td>Rajapalayam Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>23.</td>
+            <td>Pudukottai Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>24.</td>
+            <td>Ambur Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>25.</td>
+            <td>Karaikudi Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>26.</td>
+            <td>Nagapattinam Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>27.</td>
+            <td>Rameswaram Municipality </td>
+            
+        </tr>
+        <tr>
+            <td>28.</td>
+            <td>Velankanni Town Panchayat</td>
+            
+        </tr>
+        </tbody>
+      </table>  
+    </div>    
+    <p class="amrutcontent">As per AMRUT guidelines, the Union & State Governments, as well as the respective urban local body, have to contribute funds for the implementation of the AMRUT projects, as per the ratio given in the Table 9.1 below. </p>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>Sl No</th>
+                <th>Population</th>
+                <th>Union Govt. Share - Grant</th>
+                <th>State Govt. Share - Grant</th>
+                <th>ULB's Share</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Cities with more than 10 lakh population </td>
+                <td>33.33%</td>
+                <td>20%</td>
+                <td>46.67%</td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cities with more than 10 lakh population </td>
+                <td>50%</td>
+                <td>20%</td>
+                <td>30%</td>
+                
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Green Space(all AMRUT cities)</td>
+                <td>50%</td>
+                <td>20%</td>
+                <td>30%</td>
+                
+            </tr>
+            </tbody>
+        </table>
+    </div>    
+    <span class="heading4"><b>Details of AMRUT projects</b></span>
+    <p class="amrutcontent">On the basis of the approval by the Union Government on the State Annual Action Plans (1, II, III), AMRUT projects are implemented in AMRUT cities and towns. A total of 445 AMRUT project costing Rs.11,441.41 crore have been sanctioned to Tamil Nadu, as given in the Table 9.2 below. This is one of the highest allocations of funds among the States in the country. </p>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>SAAP</th>
+                <th>Total No.of projects sanctioned</th>
+                <th>Approved cost</th>
+                <th>Union Govt. share</th>
+                <th>GoTN Share</th>
+                <th>ULB Share</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>SAAP I</td>
+                <td>111</td>
+                <td>3,245.51</td>
+                <td>1,355.29</td>
+                <td>649.10</td>
+                <td>1,241.10</td>
+            </tr>
+            <tr>
+                <td>SAAP II</td>
+                <td>171</td>
+                <td>3,700.45</td>
+                <td>1,531.47</td>
+                <td>740.09</td>
+                <td>1,428.90</td>
+                
+            </tr>
+            <tr>
+                <td>SAAP III</td>
+                <td>163</td>
+                <td>4,495.46</td>
+                <td>1,854.39</td>
+                <td>899.08</td>
+                <td>1,742.00</td>
+                
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td><b>445</b></td>
+                <td><b>11,441.42</b></td>
+                <td><b>4,741.15</b></td>
+                <td><b>2,288.27</b></td>
+                <td><b>4,412.00</b></td>
+            </tr>
+            <tbody>
+        </table>
+    </div>
+    <p class="amrutcontent">422 projects at a cost of Rs.2,335.77 crore have been completed, and 23 projects at a cost of Rs.9,105.64 crore are currently in the implementation phase as in Table 9.3 below.  </p>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Name of the Project</th>
+                <th>Project Cost<br>(Rs. crore)</th>
+                <th>Date of completion<br> as per Agreement</th>
+                <th>Expected Date of<br>s completion</th>
+            </tr>
+            </thead>   
+            <tbody>
+                {%for item in data%}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                    <td>{{item[2]}}</td>
+                    <td>{{item[3]}}</td>
+                </tr>
+                {% endfor %}
+                <!-- <tr>
+                    <td>2</td>
+                    <td>CMWSSB- 150 MLD SWRO Desalination Plant - NEMMELI - Pipe Line </td>
+                    <td>125.89</td>
+                    <td>Mar-22</td>
+                    <td>Jul-22</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Coimbatore Pillur — III - Water supply </td>
+                    <td>649.30</td>
+                    <td>Aug-22</td>
+                    <td>Aug-23</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Implementation of 24x7 Water Supply System in the<br> erstwhile Coimbatore Corporation </td>
+                    <td>506.04</td>
+                    <td>Aug-23</td>
+                    <td>Mar-23</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Dedicated Water Supply Scheme to Madurai Corporation<br> from MullaiPeriyar River at Lower Camp </td>
+                    <td>1,020.00</td>
+                    <td>May-23</td>
+                    <td>Mar-23</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Tirunelveli UGSS-Phase- III </td>
+                    <td>381.86</td>
+                    <td>Dec-21</td>
+                    <td>Mar-23</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Providing Comprehensive Underground sewerage scheme to<br> Manali, Chinnasekkadu, Karambakkam and Manapakkam areas in Chennai City </td>
+                    <td>223.00</td>
+                    <td>Dec-21</td>
+                    <td>Dec-22</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>CMWSSB-Improvement and Modification works of STP </td>
+                    <td>576.76</td>
+                    <td>Feb-22</td>
+                    <td>Dec-22</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Tiruppur - Water Supply </td>
+                    <td>992.94</td>
+                    <td>Sep-22</td>
+                    <td>Sep-22</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Rameswaram UGSS </td>
+                    <td>40.33</td>
+                    <td>Aug-21</td>
+                    <td>Mar-23</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Trichy - UGSS - Phase III </td>
+                    <td>264.12</td>
+                    <td>Apr-23</td>
+                    <td>Apr-23</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Trichy - UGSS - Phase II</td>
+                    <td>344.00</td>
+                    <td>Jan-22</td>
+                    <td>Jun-22</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Vellore - UGSS - Phase - II </td>
+                    <td>343.69</td>
+                    <td>Jan-22</td>
+                    <td>Aug-22</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Vellore - UGSS - Phase - III </td>
+                    <td>248.26</td>
+                    <td>Mar-22</td>
+                    <td>Sep-22</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>CMWSSB15 - Valasaravakkam - Water Supply </td>
+                    <td>67.74</td>
+                    <td>Nov-20</td>
+                    <td>Jun-23</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Ambur - UGSS </td>
+                    <td>129.07</td>
+                    <td>Oct-21</td>
+                    <td>CS-Apr-2022;<br>
+                        STP-03/2023
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Tiruppur - UGSS </td>
+                    <td>525.92</td>
+                    <td>Jul-22</td>
+                    <td>Jul-22</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Tirunelveli UGSS-Phase- II </td>
+                    <td>289.01</td>
+                    <td>Jul-21</td>
+                    <td>Jul-22</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Coimbatore - UGSS </td>
+                    <td>442.00</td>
+                    <td>Oct-21</td>
+                    <td>Mar-23</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>CMWSSB- Providing Comprehensive Water Supply Scheme to<br> Mathur, Madipakkam, Jalladampettai and Uthandi in Chennai City </td>
+                    <td>184.11</td>
+                    <td>Jan-21</td>
+                    <td>Jun-22</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Rajapalayam - UGSS </td>
+                    <td>178.75</td>
+                    <td>Mar-22</td>
+                    <td>May-22</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Nagercoil - Water Supply </td>
+                    <td>223.44</td>
+                    <td>May-21</td>
+                    <td>May-22</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Improvement of Water Supply Distribution System to Extended<br> 8 Added areas of Coimbatore Corporation </td>
+                    <td>395.41</td>
+                    <td>Feb-21</td>
+                    <td>Apr-22 </td>
+                </tr> -->
+                </tbody>
+        </table>
+    </div>
 </section>
 
 <section id="uidssmt">
-    <span class="heading6"><u>Urban Infrastructure Development Scheme for Small and Medium Towns (UIDSSMT)</u></span>
-    <p class="uidssmtcontent">UIDSSMT is one of the components of JnNURM scheme.  All the non-mission cities of Tamil Nadu, excluding the mission cities of Chennai, Madurai, Coimbatore and their urban agglomerations, are eligible for financial assistance under this scheme.  The mission period of the scheme was 7 years. (2005-06 to 2011-12) and it was extended upto March 2014 for completion of ongoing projects.
-    <br></br>
-    122 works at a cost of Rs.882.72 Cr (GOI Share: Rs.706.18 Cr; GoTN Share: Rs.88.27 Cr; ULB Share: Rs.88.27 Cr.) sanctioned under UIDSSMT.
-    Out of the sanctioned 122 projects, 120 projects have been completed and the remaining 2 projects are nearing completion.</p>
-    <span class="heading7"><u>UIDSSMT – Transition Phase</u></span>    
-    <p class="tpcontent">The Government of India approved the following 13 projects at a cost of Rs.507.40 Cr under UIDSSMT for the transition phase of JnNURM (2013 – 14). Out of 13 projects, 6 projects have been completed, 6 projects are in progress, 1 project has been dropped (Jolarpet UGD).</p>
-    <span class="heading8"><u>Urban Infrastructure Development Scheme for Small and Medium Towns (UIDSSMT) - Revolving Fund</u></span>  
-    <p class="fundcontent">A Revolving fund was created out of the subsumed UIDSSMT scheme by TUFIDCO. Out of this fund, various Water supply and UGSS Internal Plumbing projects were sanctioned to Corporations / Municipalities during 2018-19. The details are as below:
-    <br></br>
+    <span class="heading6"><b>Urban Infrastructure Development Scheme for Small and Medium Towns (UIDSSMT) - Revolving Fund</b></span>
+    <hr>
+    <p class="fundcontent">
+        In compliance with the UIDSSMT guidelines, TUFIDCO has created a Revolving Fund. Interest-free loan has been provided to 99 Urban Local Bodies for the purpose of internal plumbing for Urban Water Supply and UGSS projects, as given in the Table 9.9 below.
+    </p>
+    <p class="fundcontent2">
+        <b>NOTE:</b> The projects are under various stages of execution. 
     </p>
     <div class="table-wrapper">
         <table class="fl-table">
@@ -56,139 +744,127 @@
                 <th>Sector</th>
                 <th>No.of Municipalities/Corporations</th>
                 <th>UIDSSMT Revolving fund sanctioned</th>
-                <th>No of connections proposed to be effected</th>
+            </tr>
+            </thead>
+            <tbody>
+                {%for item in data3 %}
+                <tr>
+                    <td>{{ item[0] }}</td>
+                    <td>{{ item[1] }}</td>
+                    <td>{{ item[2] }}</td>
+                </tr>
+                {% endfor %}
+            <tbody>
+        </table>
+    </div>
+</section>
+
+<section class="midf">
+    <p class="heading9"><b>METROPOLITAN INFRASTRUCTURE DEVELOPMENT FUND SCHEME (MIDF)</b></p>
+    <hr>
+    <p class="midfcontent">The Metropolitan Infrastructure Development Fund (MIDF) has been created by TUFIDCO in accordance with the guidelines of the Mega City Programme of the Government of India to assist urban local bodies in sanctioning projects in the Chennai Metropolitan Area.   
+        A soft loan of Rs.1156.47 crore has been approved under MIDF to the urban local bodies / parastatal agencies for implementation of 34 projects at a cost of Rs.4342.65 crore. 
+        29 projects have been completed and the remaining 5 projects are at various stages of implementation.     
+    </p> 
+</section>
+
+<section id="atal">
+    <span class="heading15"><b>ATAL MISSION FOR REJUVENATION AND URBAN TRANSFORMATION 2.0 (AMRUT 2.0)</b></span>
+    <hr>
+    <p class="atalcontent">“Atal Mission for Rejuvenation and Urban Transformation 2.0” (AMRUT 2.0) has been launched by the Union Government on 01.10.2021. AMRUT 2.0 will benefit all the statutory towns in the country including 21 municipal corporations, 150 municipalities and 490 town panchayats in Tamil Nadu.</p>
+    <p class="atalcontent">AMRUT 2.0 aims to achieve 100% water security in urban areas and providing functional water tap connections to all households. This will be achieved through circular economy of water by effecting water source conservation, rejuvenation of water bodies and wells, recycle / reuse of treated used water, and rainwater harvesting by involving community at large. This Mission will run as people's program. Mission also targets to provide 100% sewage / septage management services in 500 AMRUT cities.</p>
+    <p class="atalcontent">The key components of the AMRUT 2.0 are (a) universal coverage of water supply; (b) sewerage, septage management and recycle / reuse of treated used water; and rejuvenation of water bodies (including urban wet land) and creation of green spaces.
+    </p>
+    <span class="heading23"><b>Funding for Projects</b></span>
+    <p class="atalcontent">The Government of India funding for various categories of ULBs are as follows. </p>
+    <div class="table-wrapper">
+        <table class="fl-table" >
+            <thead>
+            <tr>
+                <th>Population of the City / Town </th>
+                <th>Admissible GOI grant </th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>Water Supply</td>
-                <td>73</td>
-                <td>169.58</td>
-                <td>531422</td>
-                
+                <td>Cities with less than one lakh population</td>
+                <td>50%</td>
             </tr>
             <tr>
-                <td>UGSS</td>
-                <td>26</td>
-                <td>193.22</td>
-                <td>287847</td>
-                
+                <td>Cities with population one lakh to ten lakh (both included) </td>
+                <td>1/3<sup>rd</sup></su></td>
             </tr>
             <tr>
-                <td>Total</td>
-                <td>99</td>
-                <td>362.80</td>
-                <td>819269</td>
-                
-            </tr>
+                <td>Cities with population more than ten lakh (at least 10% of the total project allocation to be taken up in PPP mode) </td>
+                <td>25%</td>
+            </tr>  
             <tbody>
         </table>
     </div>
-    <p class="fundcontent2">The sanctioned projects are under various stages of implementation.</p>
-</section>
-
-<section id="midf">
-    <span class="heading9"><u>METROPOLITAN INFRASTRUCTURE DEVELOPMENT FUND SCHEME (MIDF)</u></span>
-    <p class="midfcontent">The Mega City Programme (MCP) was launched by Government of India ( GOI ) during 1995 and phased from December 2005. As per the guidelines the sharing between Central and State Government is 25:25 and the balance 50% to be met by the implementing agencies. The funds from Central and State Governments flow directly to the Nodal Agencies(TUFIDCO) as grant. The Nodal agency should give project-based loans at variable rates of interest, with a judicious mix of grants and loans to various implementing institutions. The Nodal agency should create a revolving fund out of repayment made by the implementing institutions for the development of infrastructural assets on continuous basis.<br></br>
-    Accordingly, TUFIDCO had created the Revolving fund and the same has been converted as Metropolitan Infrastructure Development Fund ( MIDF ) as approved by GOI. The GOI have stated that the above funds may be utilized for any infrastructure development project on the lines of the guidelines governing the MCP. The total fund so far created under MIDF is Rs 1039.53 crore(as on 31.12.2011).   
+    <p class="atalcontent">
+        Under AMRUT, the total indicated outlay to Tamil Nadu is Rs.4,935 crore. The projects are to be submitted to Union Government in three tranches.</p>
+    <p class="atalcontent">The City Water Balance Plans (CWBPs) have been submitted to the Union Government, as indicated in the guidelines. Similarly, City Water Action Plans (CWAPs) and State Water Action Plan (SWAP) have also been submitted to the Union Government.</p>
+    <p class="atalcontent">In the first tranche (FY 2021-22), a total of 570 proposals for Rs.7,041.04 crore have been approved by the Union Government as given in the Table 9.5 below.
     </p>
-    <span class="heading10"><u>SANCTION UNDER MIDF</u></span>
-    <p class="sanctcontent">From the MIDF revolving fund TUFIDCO have sanctioned financial assistance to an extent of Rs 1156.46 crore as part funding for 31 projects sanctioned under JnNURM-UIG and 3 projects  sanctioned under  to GCC for roadsMIDF scheme to meet the local body/implementing agency contribution in Chennai city and peripheral local bodies. The Balance MIDF fund available for sanction is Rs 340.11 Crore.
-    </p>
-    <span class="heading11"><u>Agency wise sanction under MIDF (Rs In crore)</u></span>
     <div class="table-wrapper">
         <table class="fl-table">
             <thead>
             <tr>
-                <th>Name of the Agency</th>
-                <th>No.of projects sanctioned</th>
-                <th>Approved Cost</th>
-                <th>Govts. share under JnNURM</th>
-                <th>MIDF share</th>
-                <th>ULB share</th>
+                <th>S.No</th>
+                <th>Sector</th>
+                <th>Nos.<br></th>
+                <th>Tentative<br>Project<br>Cost </th>
+                <th>Union<br>Govt<br>Share</th>
+                <th>GoTN<br>Share</th>
+                <th>ULBs<br>Share</th>
             </tr>
-            </thead>
+            </thead>   
             <tbody>
-            <tr>
-                <td>CMWSSB</td>
-                <td>21</td>
-                <td>1875.52</td>
-                <td>972.88</td>
-                <td>478.63</td>
-                <td>424.00</td>
-                
-            </tr>
-            <tr>
-                <td>Corporation of Chennai</td>
-                <td>11</td>
-                <td>2414.04</td>
-                <td>768.39</td>
-                <td>664.56</td>
-                <td>981.09</td>
-                
-            </tr>
-            <tr>
-                <td>Municipalities</td>
-                <td>1</td>
-                <td>32.62</td>
-                <td>16.31</td>
-                <td>8.15</td>
-                <td>8.15</td>
-                
-            </tr>
-            <tr>
-                <td>Town panchayats</td>
-                <td>1</td>
-                <td>20.47</td>
-                <td>10.23</td>
-                <td>5.11</td>
-                <td>5.12</td>
-                
-            </tr>
-            <tbody>
+                {% for item in data1 %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ item[0] }}</td>
+                    <td>{{ item[1] }}</td>
+                    <td>{{ item[2] }}</td>
+                    <td>{{ item[3] }}</td>
+                    <td>{{ item[4] }}</td>
+                    <td>{{ item[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
     </div>
-    <span class="heading12"><u>Method of release of funds</u></span>
-    <p class="releasecontent">TUFIDCO is releasing the sanctioned funds on quarterly basis, however advance releases have also been made based on the progress of the projects. So far a sum of Rs 813.60 crore have been disbursed to the implementing agencies for the sanctioned projects.</p>
-    <span class="heading13"><u>Physical and financial status of the projects</u></span>
-    <p class="projectcontent">Out of sanctioned 34 projects, 29 projects have been completed, 5 projects are in progress. The Agency wise details of projects completed and in progress.</p>
-    <span class="heading14"><u>Details of projects completed and in progress (Rs in crore)</u></span>
-    
+            
 </section>
 
-<section id="igff">
-    <span class="heading15"><u>INFRASTRUCTURE GAP FILLING FUND AND OPERATION & MAINTENANCE GAP FILLING FUND</u></span>
-    <p class="igffcontent">Based on the Third State Finance Commission’s recommendations, Government will allocate Funds in the Budget for Infrastructure Gap Filling Fund and operation and maintenance of needy infrastructure facilities of urban local bodies. The heads of the departments, O/o Commissionerate of Municipal Administration and Directorate of Town Panchayats will draw the funds from Government and route the same to TUFIDCO.<br> </br>As per the directions given by the O/o Commissionerate of Municipal Administration and Directorate of Town Panchayats, TUFIDCO will release the fund to the local bodies.
-    </p>
-</section>
-
-<section id="ssf">
-    <span class="heading16"><u>MUNICIPAL/CORPORATION SCHOOL STUDENT SCHOLARSHIP FUND</u></span>
+<!-- <section id="ssf">
+    <span class="heading16"><b>MUNICIPAL/CORPORATION SCHOOL STUDENT SCHOLARSHIP FUND</b></span>
+    <hr>
     <p class="ssfcontent">Government have nominated TUFIDCO as a Fund Manager for MUNICIPAL/CORPORATION SCHOOL STUDENT SCHOLARSHIP FUND. Under this scheme Government have released Rs.4.53 crores and requested TUFIDCO to manage the above fund as Fund Manager and invest the amount prudently so as to get maximum rate of interest to award prizes and scholarship to the students of Municipal Corporations/Municipal Schools as and when directed from out of the interest earned from this Corpus fund. As per the directions given by the O/o Directorate of Municipal Administration TUFIDCO will release the fund to the students.</p>
-    <div id="table-wrapper">
-        <table id="fl-table" >
+    <div class="table-wrapper">
+        <table class="fl-table" >
             <thead>
             <tr>
-                <th colspan="2" id="heading">FUND POSITION</th>
-
+                <th>FUND POSITION</th>
+                <th>Rs.(in lakhs)</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td class="bod1" style="width:67%">Fund received</td>
-                <td align="right" class="bod1">453.00</td>
+                <td>Fund received</td>
+                <td>453.00</td>
             </tr>
             <tr>
-                <td class="bod2">Interest earned (received) up to 31.03.2011</td>
-                <td align="right" class="bod2">75.25</td>
+                <td>Interest earned (received) up to 31.03.2011</td>
+                <td>75.25</td>
             </tr>
             <tr>
-                <td class="bod3">Interest accrued but not received up to 31.03.2011</td>
-                <td align="right" class="bod3">39.82</td>
+                <td>Interest accrued but not received up to 31.03.2011</td>
+                <td>39.82</td>
             </tr>
             <tr>
-                <td class="bod4">Scholarship given till 23-11-2011</td>
-                <td align="right" class="bod4">71.76</td>
+                <td>Scholarship given till 23-11-2011</td>
+                <td>71.76</td>
             </tr>   
             <tbody>
         </table>
@@ -196,7 +872,8 @@
 </section>
 
 <section id="etcf">
-    <span class="heading17"><u>ENTERTAINMENT TAX COMPENSATION FUND</u></span>
+    <span class="heading17"><b>ENTERTAINMENT TAX COMPENSATION FUND</b></span>
+    <hr>
     <p class="etcfcontent">Government have taken a decision to compensate for the revenue losses incurred by the local bodies due to the entertainment tax exemption granted for the Movies named in Tamil. This scheme was introduced during 2007-08 and funds were allotted in the Government budget. O/o Directorate of Municipal Administration will draw the funds from Government and route the same to TUFIDCO. TUFIDCO will deposit the amount in its Fund account.<br><br>As per the directions given by the 0/o Directorate of Municipal Administration, Directorate of Town Panchayats and Chennai Corporation, TUFIDCO will release the fund to the local bodies.</p>
     <div class="table-wrapper">
         <table class="fl-table">
@@ -238,28 +915,48 @@
         </table>
     </div>
     <p class="etcfcontent">Apart from the above, TUFIDCO had released an amount of Rs.350.00 lakhs to the local bodies out of the interest earned from Short term investment of the capital amount.</p>
-</section>
+</section> -->
 
 <section id="knmt">
-    <span class="heading18"><u>KALAIGNAR NAGARPURA MEMPATTU THITTAM (KNMT)</u></span>
-    <p class="knmtcontent">Government of Tamil Nadu announced the “Kalaignar Nagarpura Mempattu Thittam” (KNMT) scheme to fulfil the Infrastructural Gap in all the 121 Municipalities and 528 Town Panchayats and Nodal Agency is TamilNadu Urban Finance and Infrastructure Development Corporation Ltd (TUFIDCO). Budget Allocation for this scheme is Rs.1,000 Crores in the year 2021-22. </p>
-    <span class="heading18"><u>Suggestive list of works to be taken up under this scheme</u></span>
-    <br>
-    <span class="heading18"><u>Water supply : </u></span>
+
+    <div  class="heading18"><span><b>KALAIGNAR NAGARPURA MEMPATTU THITTAM (KNMT)</b></span></div>
+    <hr>
+    <p class="knmtcontent">The Government of Tamil Nadu, in order to address the infrastructure gaps in municipalities and town panchayats have launched Kalaignar Nagarpura Mempattu Thittam (KNMT) during 2021. A total of Rs.1,000 crorehas been allocated for this scheme for the FY 2021-22.</p>
+    <p class="knmtcontent">The objectives of the scheme are to cover 100% household water supply tap connections, provide sewer links, sanitation, internal roads, streetlights, modernization of crematoriums, and other community infrastructure. Moreover, the scheme aims to bridge infrastructure gaps existing in backward areas and slums, as well as newly added areas in municipalities and town panchayats. The scheme also suggest modern libraries with computers and knowledge centres to help students and job seekers.</p>
+    <p class="knmtcontent">The KNMT includes numerous urban infrastructure projects such as development of bus stands, parks and play fields, construction of shandies and markets, rejuvenation of water bodies, procurement of e-vehicles for disposal of solid waste, and construction of public toilets, etc. </p>
+    <p class="knmtcontent">A total of 1,293 projects at a cost of Rs.975.84 crore, have been sanctioned (KNMT share of Rs.917.91 crore) so far, as given in Table 9.7 below.  </p>
+    <!-- <span class="heading21"><b>Suggestive list of works to be taken up under this scheme</b></span>
+    <br> -->
+    <!-- <details>
+    <summary>Water Supply</summary>
+    <p>mhgdydfdfhdhnstrdffd tdfjc htytn yfgtdkjbk fshtrsg</p>
+    </details> -->
+    <!-- <span class="heading19"><b>Water supply : </b></span>
     <p class="knmtcontent">Source creation/augmentation works, pumping main works, extension of pipeline and construction of OHT/GLR especially in uncovered areas. </p>
-    <span class="heading18"><u>Street Lights : </u></span>
-    <p class="knmtcontent">Street Lights will be provided in the needy areas wherever required at regular intervals of at least 30 meters. Preference will be given to relatively backward areas/slums and added / extension areas. Provision for street lights near common facility centers/ community assets will also be given priority. </p>
-    <span class="heading18"><u>Roads/Street and Lanes : </u></span>
+    <span class="heading19"><b>Street Lights : </b></span>
+    <p class="knmtcontent">Street Lights will be provided i n the needy areas wherever required at regular intervals of at least 30 meters. Preference will be given to relatively backward areas/slums and added / extension areas. Provision for street lights near common facility centers/ community assets will also be given priority. </p>
+    <span class="heading19"><b>Roads/Street and Lanes : </b></span>
     <p class="knmtcontent">Upgradation of Earthen gravel/WBM roads to All weather roads paved with BT,CC and paver blocks. </p>
-    <span class="heading18"><u>Community Infrastructure : </u></span>
+    <span class="heading19"><b>Community Infrastructure : </b></span>
     <p class="knmtcontent">New community halls with minimum seating capacity of 100 persons and a minimum area of 200 sq.m will be constructed in the needy Municipalities and Town Panchayats. </p>
-    <span class="heading18"><u>Markets : </u></span>
+    <span class="heading19"><b>Markets : </b></span>
     <p class="knmtcontent">New Markets will be constructed based on need. Upgradation of markets will also be taken up with adequate infrastructure and modern amenities. </p>
-    <span class="heading18"><u>Construction of Modern Libraries / Knowledge Centers : </u></span>
+    <span class="heading19"><b>Construction of Modern Libraries / Knowledge Centers : </b></span>
     <p class="knmtcontent">Modern libraries / Knowledge centers shall be constructed in the Municipalities / Town Panchayats to assist the students and job aspirants to equip themselves for competitive examinations. Facilities like Reading hall, Library computer with internet access and other logistics will be provided. </p>
-    <span class="heading18"><u>Other Essential Infrastructure</u></span>
+    <span class="heading20"><b>Other Essential Infrastructure</b></span>
     <p class="knmtcontent">Construction of modern Bus Stands, improvement of existing Bus stands to modern standards, Rejuvenation of water bodies, procurement of vehicles for Solid Waste Management such as Tiper Lorry, Compactor Vehicle, Battery Operated Vehicle and provision of infrastructure for Solid Waste Management activities, upgradation of existing facilities in crematorium, development of New Parks and Play fields, construction and renovation of Community/Public toilets and any other essential infrastructures will be encouraged to be provided under KNMT. 
         The Director of Municipal Administration and Director of Town Panchayats will send the proposals submitted by the ULBs to the Nodal Agency TUFIDCO to appraise and putup the proposal to the Project Sanctioning and Monitoring Committee for approval and Administrative Sanction. 
-    </p>
+    </p> -->
+
+    <p class="knmtcontent">All the above works are under various stages of implementation. "For implementation of the scheme in the year 2022-23, a sum of Rs.1,000 crore has been provided in the BE 2022-23. </p>
+</section>
+
+<section id="sing">
+    <p class="heading24"><b>SINGARA CHENNAI 2.0</b></p>
+    <hr>
+    <p class="singcontent">With the aim of making Chennai city more liveable and vibrant, the Government .of TamilNadu have launched "Singara Chennai 2.0" during the year 2021 and allocated Rs.500 crore in BE 2021-22. The scheme is being implemented by the Greater Chennai Corporation (GCC) and Chennai Metropolitan Water Supply and Sewerage Board (CMWSSB). </p> 
+    <p class="singcontent">Under Singara Chennai 2.0, a total of 182 works such as road improvements, play field, street name boards, crematorium, storm water drains, construction / renovation of school buildings, streetscaping, etc.” have been approved at a cost of Rs.395.32 crore for the BE 2021-22, as in Table 9.8 below.  </p>
+    <p class="singcontent">All the above works are under various stages of implementation. For implementation of the Scheme in FY 2022-23, a sum of Rs.500 crore has been provided in Budget 2022-23.    
+    </p> 
 </section>
 {% endblock %} 
