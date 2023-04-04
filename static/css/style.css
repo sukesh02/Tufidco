@@ -34,15 +34,17 @@ body {
   display: flex;
   padding-left: 20px;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .intro-text{
   font-size: 30px;
+  padding: 0 15%;
 }
 
 .intro-heading{
   text-decoration: underline;
+  padding: 0 15%;
   color: navy;
 }
 
@@ -82,18 +84,29 @@ body {
   text-overflow: ellipsis;
 }
 
-.embla{  
-  overflow: hidden;
-}
-
-.embla__container{  
-  display: flex;
-  text-align: center;
-}
-
-.wrap{
+/* .wrap{
   display: flex;
   padding-left: 15%;
+} */
+
+.container-fluid{
+  margin-left: 6.5em;
+}
+#parent{
+  display: flex;
+}
+
+#child1{
+  flex:1;
+}
+
+#child2{
+  flex:1;
+  padding-left: 25%;
+  margin-right: 8.5em;
+  margin-left: 8.5em;
+  width: 75%;
+  background-color: #9ED2C6;
 }
 
 .button-img{
@@ -101,8 +114,10 @@ body {
   width: 20px;
 }
 
-.embla__slide{  
-  flex: 0 0 100%;  
+.news{
+  width: fit-content;
+  padding-right: 85%;
+  overflow: hidden;
 }
 
 :root {
@@ -134,7 +149,7 @@ body {
 
 ul > li{
   display: inline-block;
- } 
+} 
 
 .list-item,
 button {
@@ -142,7 +157,7 @@ button {
 }
 
 .list-item
- {
+{
   font-size: 14px;
 }
 
@@ -223,7 +238,7 @@ fieldset {
   }
 
   .list-item
-   {
+  {
     font-size: 12px;
   }
 }
@@ -587,4 +602,3 @@ footer .flex:last-child a:hover {
   padding-right: 18px;
   font-size: 120%;
 }
-
