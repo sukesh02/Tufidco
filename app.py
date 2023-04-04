@@ -55,7 +55,7 @@ def bod():
 def fund():
     return render_template("funds.html")
 
-@app.route("/sch")
+@app.route("/tnuidrf")
 def sch():
     global sch_data
     conn = mysql.connector.connect(
@@ -115,21 +115,10 @@ def sch():
     conn.close()
     
     return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
-@app.route("/fund")
-def fund():
-     return render_template("fund.html")
 
 @app.route("/about")
 def welcome():
 	return render_template("about.html")
-
-@app.route("/schemes")
-def schemes():
-    return render_template("schemes.html")
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
