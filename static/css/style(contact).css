@@ -1,0 +1,62 @@
+.contact{
+    text-align: center;
+    padding-top: 2%;
+    color: #002E94;
+    font-weight: bold;
+}   
+
+.contactuh{
+    text-align: center;
+    /* background-color: #FFF7EB; */
+    font-size: 130%;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.call{
+    background-color: #FFF7EB;
+}
+
+.loc{
+    background-color: #FFF7EB;
+}
+
+.headpod{
+    background-color: #1d6b87;
+    border-radius: 25px;
+    padding: 5px;
+    color: white;
+}
+
+.numberpod{
+    background-color: #1d6b87;
+    border-radius: 25px;
+    color: white;
+}
+
+.direction{
+    background-color: #1d6b87;
+    border-radius: 25px;
+    color: white; 
+}
+
+.mapuh{
+    /* position: relative; */
+    padding-left: 23%;
+    /* background-color: #95ddf5; */
+  }
+
+.location{
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    color: #002E94;
+    font-weight: bold;
+}
+.tel{
+    color: black;  
+}
+
+.contactuh>thead>tr>td{
+    padding: 10px 80px;
+}
