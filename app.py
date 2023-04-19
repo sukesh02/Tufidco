@@ -1,14 +1,15 @@
 from flask import Flask,render_template,url_for
-import mysql.connector
-from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
+import mysql.connector
 import os
+
 load_dotenv()
+
 host = os.getenv('host')
 database = os.getenv('database')
+database1=os.getenv('database1')
 user = os.getenv('user')
 password= os.getenv('password')
-
 
 app = Flask(__name__)
 
@@ -46,23 +47,6 @@ def contact():
     
 #     return render_template("schemes.html", data=schemes_data)
 
-@app.route('/boardofdirectors')
-def bod():
-    # global bod_data
-    conn = mysql.connector.connect(
-    host= host,
-    database= database,
-    user= user,
-    password= password )
-
-    cursor = conn.cursor()
-    query="SELECT * FROM bod_data"
-    cursor.execute(query)
-
-    bod_data=cursor.fetchall()
-    conn.close()
-    return render_template('boardofdirectors.html', data=bod_data)
-
 @app.route('/funds')
 def fund():
     return render_template("funds.html")
@@ -75,6 +59,14 @@ def sch():
     database="funds",
     user="root",
     password="Swetha#2002" )
+
+@app.route("/schemes")
+def schemes():
+    conn = mysql.connector.connect(
+    host=host,
+    database=database1,
+    user=user,
+    password=password)
 
     cursor = conn.cursor()
     query="SELECT * FROM fund_data"
@@ -90,6 +82,7 @@ def sch():
     user="root",
     password="Swetha#2002" )
     
+
     cursor = conn.cursor()
     query="SELECT * FROM swap"
     cursor.execute(query)
@@ -127,6 +120,22 @@ def sch():
     conn.close()
     
     return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
+
+@app.route('/boardofdirectors')
+def bod():
+    conn = mysql.connector.connect(
+    host=host,
+    database=database1,
+    user=user,
+    password=password)
+
+    cursor = conn.cursor()
+    query="SELECT * FROM bod_data"
+    cursor.execute(query)
+
+    bod_data=cursor.fetchall()
+    conn.close()
+    return render_template('boardofdirectors.html', data=bod_data)
 
 @app.route("/about")
 def welcome():
