@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+
 body{
   overflow-x: scroll;
 }
@@ -29,8 +32,8 @@ body {
 }
 
 .introduction{
-  height: 30vh;
   background-color: #F5F5F5;
+  text-align: justify;
   display: flex;
   padding-left: 20px;
   flex-direction: column;
@@ -39,22 +42,36 @@ body {
 
 .intro-text{
   font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   padding: 0 15%;
 }
 
 .intro-heading{
   text-decoration: underline;
+  padding: 1%;
+  font-family: 'SF Mono', sans-serif; 
+  font-size: 22px;
   padding: 0 15%;
   color: navy;
 }
 
 .incorporation{
-  height: 30vh;
   background-color: #E8E2E2;
+  text-align: justify;
   display: flex;
   padding-left: 20px;
   flex-direction: column;
   overflow-y: scroll;
+}
+
+.fund-manager{
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.schemes-list{
+  padding: 0 17%;
 }
 
 .rolling{
@@ -107,6 +124,34 @@ body {
   margin-left: 8.5em;
   width: 75%;
   background-color: #9ED2C6;
+}
+
+.nav-button {
+  color: #1D9AF2;
+  background-color: #292D3E;
+  border: 1px solid #1D9AF2;
+  border-radius: 4px;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 32px;
+  font-size: 14px;
+  transition: all 0.2s ease-in-out;
+}
+.nav-button:hover {
+ box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
+ transform: translateX(-3px);
+}
+
+.neonText{
+  text-shadow:
+      0 0 7px #fff,
+      0 0 7px #fff,
+      0 0 7px #fff,
+      0 0 14px rgb(64, 0, 255),
+      0 0 14px rgb(30, 0, 255),
+      0 0 14px rgb(47, 0, 255),
+      0 0 14px rgb(0, 30, 255),
+      0 0 14px rgb(47, 0, 255);
 }
 
 .button-img{

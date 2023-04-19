@@ -1,10 +1,36 @@
 {% extends 'base.html' %}
 <link rel="stylesheet" href="{{ url_for('static' , filename='css/style(about).css') }}">
-{% block nav %}{% endblock %}
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav m-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-light py-1 nav-button" aria-current="page" href="/">HOME</a>
+        </li>
+        </ul>
+    </div>
+</nav>
+{% endblock %}
 
-{% block content %}{% endblock %}
-<div class="about-us">
-    <h1>TAMILNADU URBAN FINANCE AND INFRASTRUCTURE DEVELOPMENT CORPORATION LIMITED(TUFIDCO)</h1>
-    <p></p>
+{% block content %}
+<div>
+    <h1 class="intro-heading">TAMILNADU URBAN FINANCE AND INFRASTRUCTURE DEVELOPMENT CORPORATION LIMITED(TUFIDCO)</h1>
+    <p class="introduction">The decadal growth rate of India's urban
+        populaticn demonstrates the fast-growing
+        demand for various infrastructures, including
+        basic amenities in the cities. The Government of
+        Tamil Nadu has taken proactive measures in
+        addressing this problem by establishing Tamil
+        Nadu Urban Finance and Infrastructure
+        Development Corporation (TUFIDCO) on
+        20.03.1990 under the Companies Act, 1956 with
+        an aim of enhancing the quality of life for urban
+        residents by providing basic infrastructure
+        facilities in urban local bodies. 
+    </p>
 </div>
+{% endblock %}
 {% block footer %}{% endblock %}
