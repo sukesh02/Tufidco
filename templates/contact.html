@@ -1,0 +1,45 @@
+{%extends "base.html"%}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static' , filename='css/style(contact).css') }}">
+{% endblock %}
+
+{% block nav %}
+
+{% endblock %}
+
+{% block content %}
+<section class="call">
+    <u><strong><h1 class="contact">Contact Us</h1></strong></u>
+    <br>
+    <table class="contactuh">
+        <thead>
+        <tr >
+            <th class="headpod">Address</th>
+            <th class="numberpod">Phone</th>
+            <th class="direction">Directions</th>
+        </tr>
+        <tr>
+            <td>Registered Office : 490, Anna Salai, Nandanam, Chennai-35.</td>
+            <td>
+                <a class="tel text-nowrap" href="tel:044-24329800">044-24329800 </a>
+            <br>
+                <a class="tel text-nowrap" href="tel:044-24329801">044-24329801</a>
+            <br>
+                <a class="tel text-nowrap" href= "tel:044-24329802">044-24329802</a><!-- <&nbsp;&nbsp;&nbsp;&nbsp;> --></td>
+            <td><a href="https://www.google.com/maps/place/Tufidco+-+Powerfin+Tower/@13.0328632,80.2402875,17z/data=!3m1!4b1!4m6!3m5!1s0x3a5267ad7c4d4949:0x4432cecd500a6e88!8m2!3d13.032858!4d80.2424762!16s%2Fg%2F11dxq4bkk0" class="get_btn" target="_blank">Get Direction</a></td>
+        </tr>
+        </thead>
+    </table>
+</section>
+
+<section class="loc">
+<div>
+   <u><strong><h1 class="location">Our Location</h1></strong></u>
+</div>
+
+<div class="mapuh">
+    <iframe width="700" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=80.24163007736207%2C13.032153884033246%2C80.2434539794922%2C13.033497026719703&amp;layer=mapnik&amp;marker=13.032825456287492%2C80.24254202842712" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=13.03283&amp;mlon=80.24254#map=19/13.03283/80.24254&amp;layers=N">View Larger Map</a></small>
+</div>
+</section>
+{% endblock %}

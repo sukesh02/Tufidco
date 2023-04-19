@@ -1,6 +1,14 @@
 from flask import Flask,render_template,url_for
 import mysql.connector
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
+import os
+load_dotenv()
+host = os.getenv('host')
+database = os.getenv('database')
+user = os.getenv('user')
+password= os.getenv('password')
+
 
 app = Flask(__name__)
 
@@ -16,32 +24,36 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/schemes")
-def schemes():
-    global schemes_data
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="schemes",
-    user="root",
-    password="Sukesh@2002" )
+@app.route('/contact')
+def contact():
+     return render_template('contact.html')
+     
+# @app.route("/schemes")
+# def schemes():
+#     # global schemes_data
+#     conn = mysql.connector.connect(
+#     host= host,
+#     database= database,
+#     user= user,
+#     password= password)
 
-    cursor = conn.cursor()
-    query="SELECT * FROM schemes_data"
-    cursor.execute(query)
+#     cursor = conn.cursor()
+#     query="SELECT * FROM schemes_data"
+#     cursor.execute(query)
 
-    schemes_data=cursor.fetchall()
-    conn.close()
+#     schemes_data=cursor.fetchall()
+#     conn.close()
     
-    return render_template("schemes.html", data=schemes_data)
+#     return render_template("schemes.html", data=schemes_data)
 
 @app.route('/boardofdirectors')
 def bod():
-    global bod_data
+    # global bod_data
     conn = mysql.connector.connect(
-    host="localhost",
-    database="boardofdirectors",
-    user="root",
-    password="Sukesh@2002" )
+    host= host,
+    database= database,
+    user= user,
+    password= password )
 
     cursor = conn.cursor()
     query="SELECT * FROM bod_data"
@@ -62,7 +74,7 @@ def sch():
     host="localhost",
     database="funds",
     user="root",
-    password="tejaswini@3012" )
+    password="Swetha#2002" )
 
     cursor = conn.cursor()
     query="SELECT * FROM fund_data"
@@ -76,7 +88,7 @@ def sch():
     host="localhost",
     database="funds",
     user="root",
-    password="tejaswini@3012" )
+    password="Swetha#2002" )
     
     cursor = conn.cursor()
     query="SELECT * FROM swap"
@@ -90,7 +102,7 @@ def sch():
     host="localhost",
     database="funds",
     user="root",
-    password="tejaswini@3012" )
+    password="Swetha#2002" )
 
     cursor = conn.cursor()
     query="SELECT * FROM smartcity"
@@ -105,7 +117,7 @@ def sch():
     host="localhost",
     database="funds",
     user="root",
-    password="tejaswini@3012" )
+    password="Swetha#2002" )
 
     cursor = conn.cursor()
     query="SELECT * FROM uids"
