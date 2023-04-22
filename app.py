@@ -75,14 +75,12 @@ def schemes():
     sch_data=cursor.fetchall()
     conn.close()
 
-    global swap_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
     user="root",
     password="Swetha#2002" )
     
-
     cursor = conn.cursor()
     query="SELECT * FROM swap"
     cursor.execute(query)
@@ -90,7 +88,6 @@ def schemes():
     swap_data=cursor.fetchall()
     conn.close()
 
-    global smart_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
@@ -105,7 +102,6 @@ def schemes():
     smart_data=cursor.fetchall()
     conn.close()
 
-    global uids_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
