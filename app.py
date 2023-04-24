@@ -6,116 +6,65 @@ import os
 load_dotenv()
 
 host = os.getenv('host')
-database = os.getenv('database')
-database1=os.getenv('database1')
 user = os.getenv('user')
 password= os.getenv('password')
+db = os.getenv('db')
+database1=os.getenv('database1')
+database2=os.getenv('database2')
+database3=os.getenv('database3')
 
 app = Flask(__name__)
-
-# app.config['MYSQL_HOST'] = 'localhost'
-# #MySQL username
-# app.config['MYSQL_USER'] = 'root'
-# #MySQL password here in my case password is null so i left empty
-# app.config['MYSQL_PASSWORD'] = 'Sukesh@2002'
-# #Database name In my case database name is projectreporting
-# app.config['MYSQL_DB'] = 'schemes'
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route("/about")
+def welcome():
+	return render_template("about.html")
+
 @app.route('/contact')
 def contact():
      return render_template('contact.html')
-     
-# @app.route("/schemes")
-# def schemes():
-#     # global schemes_data
-#     conn = mysql.connector.connect(
-#     host= host,
-#     database= database,
-#     user= user,
-#     password= password)
-
-#     cursor = conn.cursor()
-#     query="SELECT * FROM schemes_data"
-#     cursor.execute(query)
-
-#     schemes_data=cursor.fetchall()
-#     conn.close()
-    
-#     return render_template("schemes.html", data=schemes_data)
 
 @app.route('/funds')
 def fund():
     return render_template("funds.html")
 
-@app.route("/tnuidrf")
-def sch():
-    global sch_data
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="Swetha#2002" )
-
 @app.route("/schemes")
 def schemes():
     conn = mysql.connector.connect(
     host=host,
-    database=database1,
+    db=db,
     user=user,
     password=password)
 
-    cursor = conn.cursor()
-    query="SELECT * FROM fund_data"
-    cursor.execute(query)
+    # cursor = conn.cursor()
+    # query="SELECT * FROM fund_data"
+    # cursor.execute(query)
 
-    sch_data=cursor.fetchall()
-    conn.close()
-
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="Swetha#2002" )
+    # sch_data=cursor.fetchall()
+    # conn.close()
     
-    cursor = conn.cursor()
-    query="SELECT * FROM swap"
-    cursor.execute(query)
+    # cursor = conn.cursor()
+    # query="SELECT * FROM swap"
+    # cursor.execute(query)
     
-    swap_data=cursor.fetchall()
-    conn.close()
-
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="Swetha#2002" )
+    # swap_data=cursor.fetchall()
+    # conn.close()
 
     cursor = conn.cursor()
     query="SELECT * FROM smartcity"
-    
     cursor.execute(query)
-
     smart_data=cursor.fetchall()
-    conn.close()
-
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="Swetha#2002" )
 
     cursor = conn.cursor()
     query="SELECT * FROM uids"
     cursor.execute(query)
-
     uids_data=cursor.fetchall()
     conn.close()
     
-    return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
+    return render_template("sch.html",data2=smart_data,data3=uids_data)
 
 @app.route('/boardofdirectors')
 def bod():
@@ -132,10 +81,6 @@ def bod():
     bod_data=cursor.fetchall()
     conn.close()
     return render_template('boardofdirectors.html', data=bod_data)
-
-@app.route("/about")
-def welcome():
-	return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
