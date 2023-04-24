@@ -6,43 +6,30 @@ import os
 load_dotenv()
 
 host = os.getenv('host')
-db = os.getenv('db')
-database1=os.getenv('database1')
 user = os.getenv('user')
 password= os.getenv('password')
+db = os.getenv('db')
+database1=os.getenv('database1')
+database2=os.getenv('database2')
+database3=os.getenv('database3')
 
 app = Flask(__name__)
-
-# app.config['MYSQL_HOST'] = 'localhost'
-# #MySQL username
-# app.config['MYSQL_USER'] = 'root'
-# #MySQL password here in my case password is null so i left empty
-# app.config['MYSQL_PASSWORD'] = 'Sukesh@2002'
-# #Database name In my case database name is projectreporting
-# app.config['MYSQL_DB'] = 'schemes'
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
+@app.route("/about")
+def welcome():
+	return render_template("about.html")
 
-@app.route('/boardofdirectors')
-def bod():
-    global bod_data
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="boardofdirectors",
-    user="root",
-    password="Sukesh@2002" )
+@app.route('/contact')
+def contact():
+     return render_template('contact.html')
 
-    cursor = conn.cursor()
-    query="SELECT * FROM bod_data"
-    cursor.execute(query)
 
-    bod_data=cursor.fetchall()
-    conn.close()
-    return render_template('boardofdirectors.html', data=bod_data)
+
 
 @app.route('/funds')
 def fund():
@@ -56,24 +43,16 @@ def sch():
     user=user,
     password="tejaswini@3012" )
 
-    cursor = conn.cursor()
-    query="SELECT * FROM fund_data"
-    cursor.execute(query)
+    # cursor = conn.cursor()
+    # query="SELECT * FROM fund_data"
+    # cursor.execute(query)
 
-    sch_data=cursor.fetchall()
-    conn.close()
+    
+    # cursor = conn.cursor()
+    # query="SELECT * FROM swap"
+    # cursor.execute(query)
+    
 
-    global swap_data
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="tejaswini@3012" )
-    
-    cursor = conn.cursor()
-    query="SELECT * FROM swap"
-    cursor.execute(query)
-    
     swap_data=cursor.fetchall()
     conn.close()
 
@@ -84,12 +63,14 @@ def sch():
     user="root",
     password="tejaswini@3012" )
 
+    # swap_data=cursor.fetchall()
+    # conn.close()
+
     cursor = conn.cursor()
     query="SELECT * FROM smartcity"
-    
     cursor.execute(query)
-
     smart_data=cursor.fetchall()
+
     conn.close()
 
     global uids_data
@@ -99,20 +80,16 @@ def sch():
     user="root",
     password="tejaswini@3012" )
 
+
     cursor = conn.cursor()
     query="SELECT * FROM uids"
     cursor.execute(query)
-
     uids_data=cursor.fetchall()
     conn.close()
     
-    return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
+    return render_template("sch.html",data2=smart_data,data3=uids_data)
 
 
-
-@app.route("/about")
-def welcome():
-	return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

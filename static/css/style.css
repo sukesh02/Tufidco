@@ -43,6 +43,7 @@ body {
 .intro-text{
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
   font-size: 18px;
   padding: 0 15%;
 }
@@ -196,7 +197,7 @@ body {
 
 ul > li{
   display: inline-block;
-} 
+}
 
 .list-item,
 button {
