@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 host = os.getenv('host')
-database = os.getenv('database')
+db = os.getenv('db')
 database1=os.getenv('database1')
 user = os.getenv('user')
 password= os.getenv('password')
@@ -25,48 +25,36 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/contact')
-def contact():
-     return render_template('contact.html')
-     
-# @app.route("/schemes")
-# def schemes():
-#     # global schemes_data
-#     conn = mysql.connector.connect(
-#     host= host,
-#     database= database,
-#     user= user,
-#     password= password)
 
-#     cursor = conn.cursor()
-#     query="SELECT * FROM schemes_data"
-#     cursor.execute(query)
 
-#     schemes_data=cursor.fetchall()
-#     conn.close()
-    
-#     return render_template("schemes.html", data=schemes_data)
+@app.route('/boardofdirectors')
+def bod():
+    global bod_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="boardofdirectors",
+    user="root",
+    password="Sukesh@2002" )
+
+    cursor = conn.cursor()
+    query="SELECT * FROM bod_data"
+    cursor.execute(query)
+
+    bod_data=cursor.fetchall()
+    conn.close()
+    return render_template('boardofdirectors.html', data=bod_data)
 
 @app.route('/funds')
 def fund():
     return render_template("funds.html")
 
-@app.route("/tnuidrf")
-def sch():
-    global sch_data
-    conn = mysql.connector.connect(
-    host="localhost",
-    database="funds",
-    user="root",
-    password="Swetha#2002" )
-
 @app.route("/schemes")
-def schemes():
+def sch():
     conn = mysql.connector.connect(
     host=host,
-    database=database1,
+    db=db,
     user=user,
-    password=password)
+    password="tejaswini@3012" )
 
     cursor = conn.cursor()
     query="SELECT * FROM fund_data"
@@ -75,11 +63,12 @@ def schemes():
     sch_data=cursor.fetchall()
     conn.close()
 
+    global swap_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
     user="root",
-    password="Swetha#2002" )
+    password="tejaswini@3012" )
     
     cursor = conn.cursor()
     query="SELECT * FROM swap"
@@ -88,11 +77,12 @@ def schemes():
     swap_data=cursor.fetchall()
     conn.close()
 
+    global smart_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
     user="root",
-    password="Swetha#2002" )
+    password="tejaswini@3012" )
 
     cursor = conn.cursor()
     query="SELECT * FROM smartcity"
@@ -102,11 +92,12 @@ def schemes():
     smart_data=cursor.fetchall()
     conn.close()
 
+    global uids_data
     conn = mysql.connector.connect(
     host="localhost",
     database="funds",
     user="root",
-    password="Swetha#2002" )
+    password="tejaswini@3012" )
 
     cursor = conn.cursor()
     query="SELECT * FROM uids"
@@ -117,21 +108,7 @@ def schemes():
     
     return render_template("sch.html", data=sch_data,data1=swap_data,data2=smart_data,data3=uids_data)
 
-@app.route('/boardofdirectors')
-def bod():
-    conn = mysql.connector.connect(
-    host=host,
-    database=database1,
-    user=user,
-    password=password)
 
-    cursor = conn.cursor()
-    query="SELECT * FROM bod_data"
-    cursor.execute(query)
-
-    bod_data=cursor.fetchall()
-    conn.close()
-    return render_template('boardofdirectors.html', data=bod_data)
 
 @app.route("/about")
 def welcome():

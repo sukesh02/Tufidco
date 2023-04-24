@@ -107,7 +107,9 @@ body {
 } */
 
 .container-fluid{
-  margin-left: 6.5em;
+  margin-left: 29.5em;
+  height: 50%;
+  width: 50%;
 }
 #parent{
   display: flex;
@@ -147,11 +149,11 @@ body {
       0 0 7px #fff,
       0 0 7px #fff,
       0 0 7px #fff,
-      0 0 14px rgb(64, 0, 255),
-      0 0 14px rgb(30, 0, 255),
-      0 0 14px rgb(47, 0, 255),
-      0 0 14px rgb(0, 30, 255),
-      0 0 14px rgb(47, 0, 255);
+      0 0 7px rgb(64, 0, 255),
+      0 0 7px rgb(30, 0, 255),
+      0 0 7px rgb(47, 0, 255),
+      0 0 10px rgb(0, 30, 255),
+      0 0 10px rgb(47, 0, 255);
 }
 
 .button-img{
