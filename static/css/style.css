@@ -43,6 +43,7 @@ body {
 .intro-text{
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
   font-size: 18px;
   padding: 0 15%;
 }
@@ -107,7 +108,9 @@ body {
 } */
 
 .container-fluid{
-  margin-left: 6.5em;
+  margin-left: 29.5em;
+  height: 50%;
+  width: 50%;
 }
 #parent{
   display: flex;
@@ -194,7 +197,7 @@ body {
 
 ul > li{
   display: inline-block;
-} 
+}
 
 .list-item,
 button {
