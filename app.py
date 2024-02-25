@@ -19,6 +19,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+
 @app.route("/about")
 def welcome():
 	return render_template("about.html")
@@ -27,29 +28,41 @@ def welcome():
 def contact():
      return render_template('contact.html')
 
+
+
+
 @app.route('/funds')
 def fund():
     return render_template("funds.html")
 
 @app.route("/schemes")
-def schemes():
+def sch():
     conn = mysql.connector.connect(
     host=host,
     db=db,
     user=user,
-    password=password)
+    password="tejaswini@3012" )
 
     # cursor = conn.cursor()
     # query="SELECT * FROM fund_data"
     # cursor.execute(query)
 
-    # sch_data=cursor.fetchall()
-    # conn.close()
     
     # cursor = conn.cursor()
     # query="SELECT * FROM swap"
     # cursor.execute(query)
     
+
+    swap_data=cursor.fetchall()
+    conn.close()
+
+    global smart_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
+
     # swap_data=cursor.fetchall()
     # conn.close()
 
@@ -57,6 +70,16 @@ def schemes():
     query="SELECT * FROM smartcity"
     cursor.execute(query)
     smart_data=cursor.fetchall()
+
+    conn.close()
+
+    global uids_data
+    conn = mysql.connector.connect(
+    host="localhost",
+    database="funds",
+    user="root",
+    password="tejaswini@3012" )
+
 
     cursor = conn.cursor()
     query="SELECT * FROM uids"
@@ -66,21 +89,7 @@ def schemes():
     
     return render_template("sch.html",data2=smart_data,data3=uids_data)
 
-@app.route('/boardofdirectors')
-def bod():
-    conn = mysql.connector.connect(
-    host=host,
-    database=database1,
-    user=user,
-    password=password)
 
-    cursor = conn.cursor()
-    query="SELECT * FROM bod_data"
-    cursor.execute(query)
-
-    bod_data=cursor.fetchall()
-    conn.close()
-    return render_template('boardofdirectors.html', data=bod_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
